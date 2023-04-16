@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    animation: pipe-animation 1.3s infinite linear;
+}
+
+.mario{
+    width: 110px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 520ms ease-out;
+}
+
+.clouds{
+    width: 460px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 150px;
+    }
+
+    50%{
+        bottom: 150px;
+    }
+
+    60%{
+        bottom: 150px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -460px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+.game-over {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: none;
+    color: green;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.game-over.show {
+    display: block;
+}
+.play-again{
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    width: 150px;
+    background-color: blue;
+    color: white;
+}
+.score {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+.ponto{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 40px;
+    margin-top: -29px;
+    color:  green;
+    font-size: 20px;
+    font-family: 'Sedgwick Ave Display', cursive;
+} 
+  .grass {
+    width: 100%;
+    height: 157px;
+    background-color: #b58d49 ;
+  }
+  
